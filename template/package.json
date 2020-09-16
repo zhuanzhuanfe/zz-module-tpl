@@ -1,0 +1,52 @@
+{
+  "name": "{{name}}",
+  "version": "{{version}}",
+  "description": "{{description}}",
+  "scripts": {
+    "cz": "git cz -a",
+    "test": "jest --coverage",
+    "lint": "commander-tools run lint",
+    "fix": "commander-tools run lint --fix",
+    "staged": "commander-tools run lint --staged",
+    "staged-fix": "commander-tools run lint --staged --fix",
+    "dev": "commander-tools run dev",
+    "compile": "commander-tools run compile",
+    "dist": "commander-tools run dist",
+    "analyz": "commander-tools run dist --analyz",
+    "build": "commander-tools run build",
+    "pub": "commander-tools run pub",
+    "pub-beta": "commander-tools run pub-beta",
+    "unpub": "commander-tools run unpub",
+    "doc": "commander-tools run doc",
+    "build-doc": "commander-tools run build-doc",
+    "doc-upload": "commander-tools run doc-upload"
+  },
+  "main": "index.js",
+  "keywords": [
+    "sdk",
+    "npm",
+    "import"
+  ],
+  "author": "{{author}}",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "@babel/runtime": "^7.8.3",
+    "@zz-common/zz-utils": "^1.0.4"
+  },
+  "devDependencies": {
+    "@zz-common/commander-tools": "^3.0.0",
+    "husky": "^4.2.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@zz-common/commander-tools/lib/config/commitizen.config"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "commander-tools run lint --staged",
+      "commit-msg": "commander-tools run commitlint"
+    }
+  }
+}

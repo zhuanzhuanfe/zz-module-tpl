@@ -1,0 +1,17 @@
+.eslintrc
+.browserlistrc
+.gitignore
+.npmignore
+
+jest.config.js
+babel.config.js
+prettier.config.js
+doc.config.json
+jsdoc.conf.json
+
+test/
+docs/
+demo/
+build/
+config/
+coverage/
