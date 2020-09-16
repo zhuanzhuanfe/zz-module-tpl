@@ -31,16 +31,15 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.6.5",
-    "@babel/runtime": "^7.8.3",
-    "@zz-common/zz-utils": "^1.0.4"
+    "@babel/runtime": "^7.8.3"
   },
   "devDependencies": {
-    "@zz-common/commander-tools": "^3.0.0",
+    "zz-commander-tools": "^1.0.0",
     "husky": "^4.2.5"
   },
   "config": {
     "commitizen": {
-      "path": "@zz-common/commander-tools/lib/config/commitizen.config"
+      "path": "zz-commander-tools/lib/config/commitizen.config"
     }
   },
   "husky": {
